@@ -34,7 +34,7 @@ public class TileSpawning : MonoBehaviour
         GameObject go;
         go = Instantiate(_tilePrefabs[prefabIndex]) as GameObject;
         go.transform.SetParent(transform);
-        go.transform.position = Vector3.right * (spawnX - 50f);
+        go.transform.position = Vector3.right * (spawnX + 0f);
         spawnX += tileLength;
         //adding gameobject to list
         Tileslist.Add(go);
