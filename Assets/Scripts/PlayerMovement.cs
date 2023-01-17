@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float _playerSpeed;
     [SerializeField] float _playerJumpVelocity = 10f;
 
-    private bool isGrounded = false;
+    public bool isGrounded = false;
+    public bool isInAir = false;
 
     public float raycastDistance = 0.1f;
     public LayerMask whatIsGround;
@@ -36,6 +37,10 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             NotInAir();
         }
+        if (player.position.y > 3.5)
+        {
+            isInAir = true;
+        }
     }
     void Update()
     {
@@ -45,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftControl) && isInAir == true)
         {
             HoldInAir();
         }
@@ -61,12 +66,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void Jump()
     {
-        rb.AddForce(Vector3.up * _playerJumpVelocity, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * _playerJumpVelocity,ForceMode.Impulse);
         isGrounded = false;
     }
     void HoldInAir()
     {
-        if (player.position.y > 5)
+        if (isInAir == true)
         {
             rb.drag = dragValue;
         }

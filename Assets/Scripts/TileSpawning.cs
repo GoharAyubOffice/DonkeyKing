@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class TileSpawning : MonoBehaviour
 {
     [SerializeField] GameObject[] _tilePrefabs;
-    private List<GameObject> Tileslist;
+    public List<GameObject> Tileslist;
     public float spawnX = 0f;
     public float tileLength = 50f;
     public int amountofTiles = 2;
@@ -14,18 +14,12 @@ public class TileSpawning : MonoBehaviour
     {
         Tileslist = new List<GameObject>();
         playertransform = GameObject.FindGameObjectWithTag("Player").transform;
-
-        for (int i = 0; i < amountofTiles; ++i)
-        {
-            SpawnRoad(0);
-        }
     }
     private void Update()
     {
         if (playertransform.position.x > (spawnX - amountofTiles * tileLength))
         {
             SpawnRoad(0);
-            DeleteRoad();
             SpawnRoad(1);
         }
     }
@@ -34,14 +28,9 @@ public class TileSpawning : MonoBehaviour
         GameObject go;
         go = Instantiate(_tilePrefabs[prefabIndex]) as GameObject;
         go.transform.SetParent(transform);
-        go.transform.position = Vector3.right * (spawnX + 0f);
+        go.transform.position = Vector3.right * (spawnX + 50f);
         spawnX += tileLength;
         //adding gameobject to list
         Tileslist.Add(go);
-    }
-    void DeleteRoad()
-    {
-        Destroy(Tileslist[0]);
-        Tileslist.RemoveAt(0);
     }
 }
