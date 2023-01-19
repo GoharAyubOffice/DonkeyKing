@@ -21,6 +21,7 @@ public class TileSpawning : MonoBehaviour
         {
             SpawnRoad(0);
             SpawnRoad(1);
+            SpawnRoad(2);
         }
     }
     void SpawnRoad(int prefabIndex)

@@ -8,8 +8,12 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager uiManagerInstance;
 
+    public int score;
+    public TextMeshProUGUI scoreText;
+
     private void Start()
     {
+        score = 0;
         if(uiManagerInstance == null)
         {
             uiManagerInstance = this;
@@ -17,6 +21,6 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        
+        scoreText.text = "Coins: " + score.ToString();
     }
 }

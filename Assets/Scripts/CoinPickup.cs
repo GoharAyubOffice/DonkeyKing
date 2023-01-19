@@ -5,18 +5,14 @@ using TMPro;
 
 public class CoinPickup : MonoBehaviour
 {
-    public int coinsScore = 10;
-    public TextMeshProUGUI coinsText;
+    public int scoreValue = 1; // the amount to increase the score by when a coin is picked up
 
-    private void Start()
-    {
-        coinsText = GetComponent<TextMeshProUGUI>();
-    }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            coinsText.text = coinsScore.ToString();
+            UIManager.uiManagerInstance.score += scoreValue;
+            Destroy(this.gameObject);
         }
     }
 }
