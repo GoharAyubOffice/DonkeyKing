@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a08b8f1e82094844b1b06b2e0c1b166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: 0
+  gameOverUI: {fileID: 0}
+  restartUI: {fileID: 0}
+  isGameOver: 0

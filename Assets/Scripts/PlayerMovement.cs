@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement playerInstance;
     [SerializeField] float _playerSpeed;
     [SerializeField] float _playerJumpVelocity = 10f;
+    public float _springJumpForce;
+    public float jumpHeight = 30f;
+
 
     public bool isGrounded = false;
     public bool isInAir = false;
@@ -15,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float raycastDistance = 0.1f;
     public LayerMask whatIsGround;
 
-    private Rigidbody rb;
+    public Rigidbody rb;
     [SerializeField] float dragValue = 5;  //To slow down player in air
     [SerializeField] float dragValueDefault = 1;
 
@@ -27,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
             playerInstance = this;
         }
         rb = GetComponent<Rigidbody>();
+        _springJumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y));
     }
     void FixedUpdate()
     {

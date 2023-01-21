@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManagerInstance;
 
     private GameObject _player;
-    public GameObject UI;
+    public GameObject gameOverUI;
+    public GameObject restartUI;
+
 
     public bool isGameOver = true;
 
@@ -22,5 +24,11 @@ public class GameManager : MonoBehaviour
         _player = GameObject.Find("Player");
 
         _player.gameObject.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        UIManager.uiManagerInstance.currentTime = 0;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

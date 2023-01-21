@@ -20,8 +20,11 @@ public class Hurdle : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameManager.gameManagerInstance.isGameOver = false;
-            GameManager.gameManagerInstance.UI.gameObject.SetActive(true);
+            GameManager.gameManagerInstance.gameOverUI.gameObject.SetActive(true);
+            GameManager.gameManagerInstance.restartUI.gameObject.SetActive(true);
             _player.gameObject.SetActive(false);
+            UIManager.uiManagerInstance.currentTime += UIManager.uiManagerInstance.currentTime;
+            Time.timeScale = 0;
         }
     }
 }

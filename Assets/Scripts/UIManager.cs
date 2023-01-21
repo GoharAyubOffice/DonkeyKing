@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,8 +11,14 @@ public class UIManager : MonoBehaviour
     public int score;
     public TextMeshProUGUI scoreText;
 
+    public TextMeshProUGUI timeText;
+
+    public float currentTime = 0f;
+
     private void Start()
     {
+        Time.timeScale = 1;
+
         score = 0;
         if(uiManagerInstance == null)
         {
@@ -21,6 +27,10 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        scoreText.text = "Coins: " + score.ToString();
+        scoreText.text = "Coins: " + score.ToString(); // To show the Coins text
+
+        currentTime += Time.deltaTime;
+        timeText.text = "Score:" + Mathf.RoundToInt(currentTime).ToString();
     }
+    
 }
