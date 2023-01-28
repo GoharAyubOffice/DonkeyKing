@@ -13,7 +13,7 @@ public class UIManager : MonoBehaviour
 
     public TextMeshProUGUI timeText;
 
-    public float currentTime = 0f;
+    public float distance = 0f;
 
     private void Start()
     {
@@ -29,8 +29,7 @@ public class UIManager : MonoBehaviour
     {
         coinsText.text = "Coins: " + score.ToString(); // To show the Coins text
 
-        currentTime += Time.deltaTime;
-        timeText.text = "Score:" + Mathf.RoundToInt(currentTime).ToString();
+        distance += PlayerMovement.playerInstance._playerSpeed * Time.deltaTime;  // calculating the distance with speed * time
+        timeText.text = "Distance:" + Mathf.RoundToInt(distance).ToString();
     }
-    
 }

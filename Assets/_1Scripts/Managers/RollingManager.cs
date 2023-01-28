@@ -26,7 +26,7 @@ public class RollingManager : MonoBehaviour
             for (int i = 0; i < 2; i++)
             {
                 // Spawn the rolling animation objects in front of the player
-                Vector3 offset = new Vector3(i * 1, 0, 0); // Offset the position on the x-axis by 1 units for each iteration
+                Vector3 offset = new Vector3(i * 2, 0, 0); // Offset the position on the x-axis by 1 units for each iteration
                 GameObject prefab = Instantiate(rollingObjectPrefab, player.position + player.right * spawnDistance + offset, Quaternion.identity);
                 prefab.transform.SetParent(rollingobjectParent);
             }

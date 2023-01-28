@@ -7,6 +7,7 @@ public class Hurdle : MonoBehaviour
 {
     public static Hurdle hurdleInstance;
     private GameObject _player;
+
     private void Start()
     {
         if (hurdleInstance == null)
@@ -15,6 +16,8 @@ public class Hurdle : MonoBehaviour
         }
         _player = GameObject.Find("Player");
     }
+
+   
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -23,11 +26,12 @@ public class Hurdle : MonoBehaviour
             GameManager.gameManagerInstance.gameOverUI.gameObject.SetActive(true);
             GameManager.gameManagerInstance.restartUI.gameObject.SetActive(true);
             _player.gameObject.SetActive(false);
-            UIManager.uiManagerInstance.currentTime += UIManager.uiManagerInstance.currentTime;
+            UIManager.uiManagerInstance.distance += UIManager.uiManagerInstance.distance;
 
             GameManager.gameManagerInstance.gameStarted = false;
 
             Time.timeScale = 0;
         }
     }
+   
 }

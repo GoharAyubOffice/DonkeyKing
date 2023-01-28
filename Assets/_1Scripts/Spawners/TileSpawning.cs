@@ -22,10 +22,6 @@ public class TileSpawning : MonoBehaviour
             // add new tiles in random order
             int randomIndex = Random.Range(0, _tilePrefabs.Length);
             SpawnRoad(randomIndex);
-            randomIndex = Random.Range(0, _tilePrefabs.Length);
-            SpawnRoad(randomIndex);
-            randomIndex = Random.Range(0, _tilePrefabs.Length);
-            SpawnRoad(randomIndex);
         }
     }
     void SpawnRoad(int prefabIndex)

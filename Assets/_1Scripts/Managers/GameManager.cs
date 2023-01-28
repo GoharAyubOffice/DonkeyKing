@@ -30,15 +30,19 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !gameStarted)
+        if (Input.GetMouseButtonDown(0))
         {
             gameStarted = true;
             Time.timeScale = 1;
         }
+        if(!gameStarted)
+        {
+            Time.timeScale = 0;
+        }
     }
     public void Restart()
     {
-        UIManager.uiManagerInstance.currentTime = 0;
+        UIManager.uiManagerInstance.distance = 0;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

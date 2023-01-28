@@ -48,6 +48,8 @@ MonoBehaviour:
   _tilePrefabs:
   - {fileID: 3830128536745167554, guid: a8f8ec6e6ae385e4ab5855b8a8d805f6, type: 3}
   - {fileID: 3830128536745167554, guid: 9bfe9d63eb86d3546bf91f40715a4a09, type: 3}
+  - {fileID: 3830128536745167554, guid: 4d8a3a4027bc31a46ba6dab05178b30d, type: 3}
+  - {fileID: 3830128536745167554, guid: 57b2e17a083fb894fbd64b80afab9f82, type: 3}
   Tileslist: []
   spawnX: 0
   tileLength: 50
@@ -64,5 +66,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab2d8a08522e544b9f8f07219395cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentTransform: {fileID: 0}
-  tilesLimit: 6
+  parentTransform: {fileID: 3341553073519449448}
+  tilesLimit: 4

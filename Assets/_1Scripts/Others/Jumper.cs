@@ -9,7 +9,6 @@ public class Jumper : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Spring Jump");
             PlayerMovement.playerInstance.rb.velocity = Vector3.zero;
             PlayerMovement.playerInstance.rb.AddForce(Vector3.up * PlayerMovement.playerInstance._springJumpForce, ForceMode.Impulse);
         }
