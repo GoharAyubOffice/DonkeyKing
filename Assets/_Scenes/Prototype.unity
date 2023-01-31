@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62060631}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.917863, y: 0.04786923, z: 0.5122501}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -856,17 +856,17 @@ PrefabInstance:
     - target: {fileID: 689826422468181258, guid: 76f86f8d465538649bea085a1f10f5c9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.917863
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 689826422468181258, guid: 76f86f8d465538649bea085a1f10f5c9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04786923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 689826422468181258, guid: 76f86f8d465538649bea085a1f10f5c9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5122501
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 689826422468181258, guid: 76f86f8d465538649bea085a1f10f5c9,
         type: 3}
@@ -1413,6 +1413,11 @@ PrefabInstance:
       objectReference: {fileID: 710632487}
     - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
+      propertyPath: spawnDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
+        type: 3}
       propertyPath: scoreThreshold
       value: 5
       objectReference: {fileID: 0}
@@ -1426,6 +1431,12 @@ PrefabInstance:
       propertyPath: isgeneratedRnumber
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
+        type: 3}
+      propertyPath: rollingObjectPrefab
+      value: 
+      objectReference: {fileID: 9198096692090688317, guid: 3ce72cc673642d84c919303b48a93e2a,
+        type: 3}
     - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
       propertyPath: rollingobjectParent
@@ -1449,17 +1460,17 @@ PrefabInstance:
     - target: {fileID: 8068486887640460005, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.917863
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068486887640460005, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04786923
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068486887640460005, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5122501
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8068486887640460005, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}

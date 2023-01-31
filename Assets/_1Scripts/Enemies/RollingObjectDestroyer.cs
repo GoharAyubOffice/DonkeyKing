@@ -5,7 +5,7 @@ using UnityEngine;
 public class RollingObjectDestroyer : MonoBehaviour
 {
     public Transform parentTransform;
-    public float rollerLimit = 2;
+    public float rollerLimit = 4;
 
     private void Update()
     {
