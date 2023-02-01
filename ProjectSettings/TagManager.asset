@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TileCollider
+  - Coin
   layers:
   - Default
   - TransparentFX

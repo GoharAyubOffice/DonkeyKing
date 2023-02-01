@@ -45,12 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d05256988b0d845bcdb4275a89a334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rollingObjectPrefab: {fileID: 7941783860441006340, guid: 9f529cb366420e64fb48f2187af5c8e7,
+  rollingObjectPrefab: {fileID: 9198096692090688317, guid: 3ce72cc673642d84c919303b48a93e2a,
     type: 3}
   scoreThreshold: 5
   spawnDistance: 50
   player: {fileID: 0}
-  rollingobjectParent: {fileID: 0}
+  rollingobjectParent: {fileID: 8068486887640460005}
+  rollerobjectsSpawnDelay: 5
+  isgeneratedRnumber: 1
 --- !u!114 &26595617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,5 +65,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0caeb311778d994ea11e87049e0f8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentTransform: {fileID: 0}
-  rollerLimit: 1
+  parentTransform: {fileID: 8068486887640460005}
+  rollerLimit: 4

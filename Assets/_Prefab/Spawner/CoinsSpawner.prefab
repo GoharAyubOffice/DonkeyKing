@@ -51,11 +51,10 @@ MonoBehaviour:
   - {fileID: 952157110324619698, guid: 94eafb6544ffea242b35443ff5f80428, type: 3}
   CoinsList: []
   spawnX: 0
-  spawnY1: 8
-  spawnY2: 8
-  spawnY3: 8
+  spawnY1: 0
   CoinsSpawnDistance: 50
   amountofCoinsParent: 1
+  isgeneratedRnumber: 1
 --- !u!114 &6691665615671264803
 MonoBehaviour:
   m_ObjectHideFlags: 0

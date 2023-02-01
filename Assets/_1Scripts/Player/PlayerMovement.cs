@@ -6,20 +6,30 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement playerInstance;
+
+    [Header("Player Information")]
+
     [SerializeField] public float _playerSpeed;
+
     [SerializeField] float _playerJumpVelocity = 10f;
+
     public float _springJumpForce;
+
     public float jumpHeight = 30f;
 
-
-    public bool isGrounded = false;
-    public bool isJumpThourghBottom = false;
-    public bool isInAir = false;
-
     public float raycastDistance = 0.1f;
+
     public LayerMask whatIsGround;
 
     public float raycastDistanceBottom = 0.2f;
+
+    public bool isGrounded = false;
+
+    public bool isJumpThourghBottom = false;
+
+    public bool isInAir = false;
+
+    [Header("Player RB Information")]
 
     public Rigidbody rb;
     [SerializeField] float dragValue = 5;  //To slow down player in air
@@ -27,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Transform player;
     [SerializeField] Transform playerHead;
+
     void Start()
     {
         if (playerInstance == null)
@@ -63,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        TileBottomCheck();
 
         if (GameManager.gameManagerInstance.gameStarted == true)
         {
@@ -82,10 +92,6 @@ public class PlayerMovement : MonoBehaviour
         {
             NotInAir();
         }
-    }
-    void TileBottomCheck()
-    {
-        
     }
     void Movement()
     {

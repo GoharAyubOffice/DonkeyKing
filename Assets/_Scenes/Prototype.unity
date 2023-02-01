@@ -826,6 +826,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1976095571 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1976095571, guid: 1a325a3f3f3e8764e9946f8bb8b637b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5121808546125632033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1976095572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1976095572, guid: 1a325a3f3f3e8764e9946f8bb8b637b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5121808546125632033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e7ab9a4071fc548bdd234aaba2ba8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &689826421473299236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1008,16 +1032,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 585282676}
     m_Modifications:
-    - target: {fileID: 1759470006210032678, guid: 361cb25963cf94649966607429910649,
-        type: 3}
-      propertyPath: raycastDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1759470006210032678, guid: 361cb25963cf94649966607429910649,
-        type: 3}
-      propertyPath: raycastDistanceBottom
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 1018706691, guid: 361cb25963cf94649966607429910649, type: 3}
+      propertyPath: powerBar
+      value: 
+      objectReference: {fileID: 1976095572}
+    - target: {fileID: 1018706691, guid: 361cb25963cf94649966607429910649, type: 3}
+      propertyPath: _powerUpslider
+      value: 
+      objectReference: {fileID: 1976095571}
     - target: {fileID: 1759470006210032680, guid: 361cb25963cf94649966607429910649,
         type: 3}
       propertyPath: m_RootOrder
@@ -1147,17 +1169,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TileParent
       objectReference: {fileID: 0}
-    - target: {fileID: 3341553073519449455, guid: caba9d4f127d9164795990cdb8a6830d,
-        type: 3}
-      propertyPath: _tilePrefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3341553073519449455, guid: caba9d4f127d9164795990cdb8a6830d,
-        type: 3}
-      propertyPath: _tilePrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 3830128536745167554, guid: 9bfe9d63eb86d3546bf91f40715a4a09,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caba9d4f127d9164795990cdb8a6830d, type: 3}
 --- !u!1001 &5121808546125632033
@@ -1167,21 +1178,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 623035158}
     m_Modifications:
-    - target: {fileID: 1943978026, guid: 1a325a3f3f3e8764e9946f8bb8b637b3, type: 3}
-      propertyPath: m_text
+    - target: {fileID: 1068895255, guid: 1a325a3f3f3e8764e9946f8bb8b637b3, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943978026, guid: 1a325a3f3f3e8764e9946f8bb8b637b3, type: 3}
-      propertyPath: m_fontSize
-      value: 44.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943978026, guid: 1a325a3f3f3e8764e9946f8bb8b637b3, type: 3}
-      propertyPath: m_fontSizeMax
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943978026, guid: 1a325a3f3f3e8764e9946f8bb8b637b3, type: 3}
-      propertyPath: m_enableAutoSizing
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1661284909071150338, guid: 1a325a3f3f3e8764e9946f8bb8b637b3,
         type: 3}
@@ -1313,16 +1312,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 627514244}
     m_Modifications:
-    - target: {fileID: 6691665615671264802, guid: 3c91f5ea0faa61e4ab5a4fadcdb0f7ba,
-        type: 3}
-      propertyPath: spawnY1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6691665615671264802, guid: 3c91f5ea0faa61e4ab5a4fadcdb0f7ba,
-        type: 3}
-      propertyPath: CoinsSpawnDistance
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 6691665615671264812, guid: 3c91f5ea0faa61e4ab5a4fadcdb0f7ba,
         type: 3}
       propertyPath: m_Name
@@ -1398,14 +1387,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62060632}
     m_Modifications:
-    - target: {fileID: 26595617, guid: be74a39d5b39fe1429364c2cbcedc640, type: 3}
-      propertyPath: rollerLimit
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 26595617, guid: be74a39d5b39fe1429364c2cbcedc640, type: 3}
-      propertyPath: parentTransform
-      value: 
-      objectReference: {fileID: 26595616}
     - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
       propertyPath: player
@@ -1413,44 +1394,13 @@ PrefabInstance:
       objectReference: {fileID: 710632487}
     - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
-      propertyPath: spawnDistance
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
-        type: 3}
       propertyPath: scoreThreshold
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
-        type: 3}
-      propertyPath: rollerDelayTime
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
-        type: 3}
-      propertyPath: isgeneratedRnumber
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
-        type: 3}
-      propertyPath: rollingObjectPrefab
-      value: 
-      objectReference: {fileID: 9198096692090688317, guid: 3ce72cc673642d84c919303b48a93e2a,
-        type: 3}
-    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
-        type: 3}
-      propertyPath: rollingobjectParent
-      value: 
-      objectReference: {fileID: 26595616}
-    - target: {fileID: 8068486887640459994, guid: be74a39d5b39fe1429364c2cbcedc640,
-        type: 3}
-      propertyPath: rollerobjectsSpawnDelay
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8068486887640459995, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}
       propertyPath: m_Name
-      value: RollingObjectsManager
+      value: EnemiesManager
       objectReference: {fileID: 0}
     - target: {fileID: 8068486887640460005, guid: be74a39d5b39fe1429364c2cbcedc640,
         type: 3}

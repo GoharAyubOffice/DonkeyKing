@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1759470006210032680}
   - component: {fileID: 1759470006210032681}
   - component: {fileID: 1759470006210032682}
-  - component: {fileID: 1759470006210032683}
   - component: {fileID: 1759470006210032679}
+  - component: {fileID: 3015858001073714940}
   - component: {fileID: 1759470006210032678}
+  - component: {fileID: 1018706691}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -87,20 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1759470006210032683
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759470006210032684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!54 &1759470006210032679
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -117,6 +104,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 120
   m_CollisionDetection: 2
+--- !u!65 &3015858001073714940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759470006210032684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &1759470006210032678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,23 +133,36 @@ MonoBehaviour:
   _playerJumpVelocity: 17
   _springJumpForce: 0
   jumpHeight: 30
-  isGrounded: 0
-  isJumpThourghBottom: 0
-  canJumpThrough: 0
-  isInAir: 0
-  raycastDistance: 1.2
+  raycastDistance: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  whatIs:
-    serializedVersion: 2
-    m_Bits: 0
-  raycastDistanceBottom: 0.2
+  raycastDistanceBottom: 10
+  isGrounded: 0
+  isJumpThourghBottom: 0
+  isInAir: 0
   rb: {fileID: 0}
   dragValue: 7
   dragValueDefault: 1
   player: {fileID: 1759470006210032680}
   playerHead: {fileID: 4583718052483413625}
+--- !u!114 &1018706691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759470006210032684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e51d4c096957a84da3d4e71cd2904da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _powerUpslider: {fileID: 0}
+  powerBar: {fileID: 0}
+  maxPowerUpValue: 7
+  currentPowerUpValue: 0
+  isDash: 0
 --- !u!1 &3325507703148679875
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,8 +190,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3325507703148679875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0.1864, z: 0}
+  m_LocalScale: {x: 0.2, y: 1.9592572, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1759470006210032680}
