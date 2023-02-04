@@ -1040,6 +1040,11 @@ PrefabInstance:
       propertyPath: _powerUpslider
       value: 
       objectReference: {fileID: 1976095571}
+    - target: {fileID: 1759470006210032678, guid: 361cb25963cf94649966607429910649,
+        type: 3}
+      propertyPath: _playerDashForce
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1759470006210032680, guid: 361cb25963cf94649966607429910649,
         type: 3}
       propertyPath: m_RootOrder

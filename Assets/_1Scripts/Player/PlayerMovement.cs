@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float _playerJumpVelocity = 10f;
 
+    public float _playerDashForce = 10f;
+
     public float _springJumpForce;
 
     public float jumpHeight = 30f;
@@ -35,8 +37,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float dragValue = 5;  //To slow down player in air
     [SerializeField] float dragValueDefault = 1;
 
-    [SerializeField] Transform player;
+    public Transform player;
     [SerializeField] Transform playerHead;
+
+    [Header("Player Collider Information")]
+
+    public BoxCollider _playerBoxCollider;
 
     void Start()
     {
@@ -45,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
             playerInstance = this;
         }
         rb = GetComponent<Rigidbody>();
+        _playerBoxCollider = GetComponent<BoxCollider>();
 
         _springJumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y));
     }
@@ -59,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             isGrounded = true;
+            isInAir = false;
             NotInAir();
         }
 
