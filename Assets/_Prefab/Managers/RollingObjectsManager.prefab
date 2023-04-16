@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rollingObjectPrefab: {fileID: 9198096692090688317, guid: 3ce72cc673642d84c919303b48a93e2a,
     type: 3}
-  scoreThreshold: 5
+  scoreThreshold: 10
   spawnDistance: 50
   player: {fileID: 0}
   rollingobjectParent: {fileID: 8068486887640460005}

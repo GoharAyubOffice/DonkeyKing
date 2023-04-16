@@ -25,8 +25,9 @@ public class PlayerPowerup : MonoBehaviour
     {
         PowerUpBar();
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && isDash == true)
+        if (Input.GetKey(KeyCode.LeftShift) && isDash == true)
         {
+
             PowerDash();
             StartCoroutine(DisableKinematic());
         }
@@ -55,14 +56,15 @@ public class PlayerPowerup : MonoBehaviour
 
         Time.timeScale = 2;
 
+
         PlayerMovement.playerInstance.isGrounded = false;
         PlayerMovement.playerInstance.isInAir = false;
 
         PlayerMovement.playerInstance.rb.isKinematic = true;
         yield return new WaitForSeconds(dashDuration);
 
+
         PlayerMovement.playerInstance.rb.isKinematic = false;
         Time.timeScale = 1;
-
     }
 }

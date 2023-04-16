@@ -23,7 +23,7 @@ public class Hurdle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            _player.gameObject.SetActive(false);
+            PlayerMovement.playerInstance.playerAnim.SetBool("isDie", true);
 
             GameManager.gameManagerInstance.isGameOver = false;
             GameManager.gameManagerInstance.gameOverUI.gameObject.SetActive(true);
@@ -31,8 +31,6 @@ public class Hurdle : MonoBehaviour
             UIManager.uiManagerInstance.distance += UIManager.uiManagerInstance.distance;
             GameManager.gameManagerInstance.gameStarted = false;
 
-
-            Time.timeScale = 0;
         }
     }
 }

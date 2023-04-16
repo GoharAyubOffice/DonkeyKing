@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] float _playerJumpVelocity = 10f;
 
+    [SerializeField] float _swipeDownVelocity = 5;
     public float _playerDashForce = 10f;
 
     public float _springJumpForce;
@@ -31,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isInAir = false;
 
+    public bool isCrouching;
+
     [Header("Player RB Information")]
 
     public Rigidbody rb;
@@ -44,14 +47,21 @@ public class PlayerMovement : MonoBehaviour
 
     public BoxCollider _playerBoxCollider;
 
+    [Header("Player Animation Information")]
+
+    public Animator playerAnim;
+
     void Start()
     {
+        isCrouching = false;
+
         if (playerInstance == null)
         {
             playerInstance = this;
         }
         rb = GetComponent<Rigidbody>();
         _playerBoxCollider = GetComponent<BoxCollider>();
+        playerAnim.GetComponent<Animator>();
 
         _springJumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y));
     }
@@ -65,15 +75,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
         {
+            //if is grounded than hold false
+            playerAnim.SetBool("isHold", false);
+
             isGrounded = true;
             isInAir = false;
             NotInAir();
         }
 
-        if (player.position.y > 3.5)
+        if(!isGrounded)
         {
             isInAir = true;
         }
+        
+        /*if(isInAir == true)
+        {
+            playerAnim.SetBool("isJump", true);
+        }*/
 
         if (isJumpThourghBottom)
         {
@@ -92,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Crouch();
+        }
+
         if (Input.GetKey(KeyCode.LeftControl) && isInAir == true)
         {
             HoldInAir();
@@ -105,15 +128,35 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 velocity = new Vector3(_playerSpeed, 0, 0);
         rb.MovePosition(rb.position + velocity * Time.deltaTime);
+
+        // Run Animation
+        playerAnim.SetBool("isRun", true);
+        if (isGrounded)
+        {
+            playerAnim.SetBool("isJump", false);
+        }
+        /*if (!isGrounded)
+        {
+            playerAnim.SetBool("isJump", true);
+        }*/
     }
     void Jump()
     {
         rb.AddForce(Vector3.up * _playerJumpVelocity, ForceMode.Impulse);
 
         isGrounded = false;
+        // Jump Animation
+        playerAnim.SetBool("isJump", true);
+    }
+    void Crouch()
+    {
+        rb.AddForce(Vector3.down * _swipeDownVelocity, ForceMode.Impulse);
+
+        isCrouching = true;
     }
     void HoldInAir()
     {
+        playerAnim.SetBool("isHold", true);
         if (isInAir == true)
         {
             rb.drag = dragValue;
@@ -122,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
     void NotInAir()
     {
         rb.drag = dragValueDefault;
+        playerAnim.SetBool("isHold", false);
     }
 }
 

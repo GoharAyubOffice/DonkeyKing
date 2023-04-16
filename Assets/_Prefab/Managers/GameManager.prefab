@@ -46,4 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 0}
   restartUI: {fileID: 0}
+  gameStarted: 0
   isGameOver: 0

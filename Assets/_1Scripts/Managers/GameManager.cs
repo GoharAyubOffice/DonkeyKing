@@ -35,10 +35,6 @@ public class GameManager : MonoBehaviour
             gameStarted = true;
             Time.timeScale = 1;
         }
-        if(!gameStarted)
-        {
-            Time.timeScale = 0;
-        }
     }
     public void Restart()
     {
