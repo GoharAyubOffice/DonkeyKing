@@ -1659,7 +1659,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8869010179805437087}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -28.123627, y: -3.8149147, z: -1.014656}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1717,16 +1717,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSpeed: 10
-  _playerJumpVelocity: 20
+  _playerJumpVelocity: 17
   _swipeDownVelocity: 5
   _playerDashForce: 50
-  _springJumpForce: 14.007141
-  jumpHeight: 10
+  _springJumpForce: 20
+  jumpHeight: 30
   raycastDistance: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  raycastDistanceBottom: 10
+  raycastDistanceBottom: 30
   isGrounded: 1
   isJumpThourghBottom: 0
   isInAir: 0

@@ -11,7 +11,7 @@ public class CoinPickup : MonoBehaviour
 
     private void Update()
     {
-        powerBar = FindObjectOfType<PlayerPowerup>();
+        powerBar = PlayerPowerup.playerpowerupInstance;
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -27,9 +27,12 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
-        coinsText.text = "Coins: " + score.ToString(); // To show the Coins text
+        //coinsText.text = "Coins: " + score.ToString(); // To show the Coins text
+        coinsText.text = string.Format("Coins: {0}", score); // To show the Coins text
 
+        //distance += PlayerMovement.playerInstance._playerSpeed * Time.deltaTime;  // calculating the distance with speed * time
+        //timeText.text = "Distance:" + Mathf.RoundToInt(distance).ToString();
         distance += PlayerMovement.playerInstance._playerSpeed * Time.deltaTime;  // calculating the distance with speed * time
-        timeText.text = "Distance:" + Mathf.RoundToInt(distance).ToString();
+        timeText.text = string.Format("Distance: {0}", Mathf.RoundToInt(distance));
     }
 }

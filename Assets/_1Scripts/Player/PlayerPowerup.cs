@@ -27,7 +27,9 @@ public class PlayerPowerup : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && isDash == true)
         {
+            
 
+            PlayerMovement.playerInstance.playerAnim.SetBool("isBoost", true);     //Turn on Boost Animation
             PowerDash();
             StartCoroutine(DisableKinematic());
         }
@@ -63,6 +65,7 @@ public class PlayerPowerup : MonoBehaviour
         PlayerMovement.playerInstance.rb.isKinematic = true;
         yield return new WaitForSeconds(dashDuration);
 
+        PlayerMovement.playerInstance.playerAnim.SetBool("isBoost", false); //Turn off Boost Animation
 
         PlayerMovement.playerInstance.rb.isKinematic = false;
         Time.timeScale = 1;

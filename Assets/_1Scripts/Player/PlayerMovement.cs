@@ -87,11 +87,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isInAir = true;
         }
-        
-        /*if(isInAir == true)
-        {
-            playerAnim.SetBool("isJump", true);
-        }*/
 
         if (isJumpThourghBottom)
         {
@@ -115,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
             Crouch();
         }
 
-        if (Input.GetKey(KeyCode.LeftControl) && isInAir == true)
+        if (Input.GetKey(KeyCode.LeftControl) && isInAir == true )
         {
             HoldInAir();
         }
@@ -135,10 +130,10 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnim.SetBool("isJump", false);
         }
-        /*if (!isGrounded)
+        if (!isGrounded)
         {
             playerAnim.SetBool("isJump", true);
-        }*/
+        }
     }
     void Jump()
     {

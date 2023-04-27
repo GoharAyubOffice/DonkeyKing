@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
+
         gameStarted = false;
         if (gameManagerInstance == null)
         {
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Application.targetFrameRate = 60;
+
         if (Input.GetMouseButtonDown(0))
         {
             gameStarted = true;
